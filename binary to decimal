@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int binarytodecimal(int bin){
+        int ans=0;
+        int pow=1;
+        while(bin>0){
+        int rem=bin%2;
+        rem=rem*pow;
+        ans=ans+rem;
+        bin=bin/10;
+        pow=pow*2;
+        }
+        return ans;
+    }
+int main(){
+    cout<<binarytodecimal(101101)<<endl;
+}
